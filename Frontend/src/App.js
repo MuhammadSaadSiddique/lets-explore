@@ -17,6 +17,7 @@ const About = React.lazy(() => import('./pages/About'));
 const NotFound = React.lazy(() => import('./pages/NotFound'));
 const Details = React.lazy(() => import('./pages/Details'));
 const Contact = React.lazy(() => import('./pages/Contact'));
+const Planner = React.lazy(() => import('./pages/Planner'));
 
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
                                             <Route path='/about' exact component={About}/>
                                             <Route path='/contact' exact component={Contact}/>
                                             <Route path='/details/:id' exact component={Details}/>
+                                            <Route path='/planner' exact component={Planner}/>
                                             <Route component={NotFound}/>
                                         </Switch>
                                     </HelmetProvider>
