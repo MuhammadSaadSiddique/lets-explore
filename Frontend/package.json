@@ -16,7 +16,7 @@
     "axios": "^1.1.2",
     "concurrently": "^6.2.1",
     "dayjs": "^1.11.5",
-    "node-sass": "^7.0.0",
+    "node-sass": "^7.0.3",
     "prettier": "^2.5.1",
     "query-string": "^7.1.1",
     "react": "^17.0.2",
