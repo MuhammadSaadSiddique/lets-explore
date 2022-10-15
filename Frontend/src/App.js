@@ -11,6 +11,7 @@ import AnimationsProvider from "./context/providers/AnimationsProvider";
 import React,{Suspense} from "react";
 import Nav from "./components/Nav";
 import LoadingSpinner from "./components/shared/LoadingSpinner";
+import SearchRoot from './pages/search-root';
 
 const Home = React.lazy(() => import('./pages/Home'));
 const About = React.lazy(() => import('./pages/About'));
@@ -39,6 +40,7 @@ function App() {
                                             <Route path='/contact' exact component={Contact}/>
                                             <Route path='/details/:id' exact component={Details}/>
                                             <Route path='/planner' exact component={Planner}/>
+                                            <Route path='/search-root' exact component={SearchRoot}/>
                                             <Route component={NotFound}/>
                                         </Switch>
                                     </HelmetProvider>
