@@ -5,7 +5,7 @@ import {useHistory} from "react-router-dom";
 const Header = ({heading, paragraph, children, image}) => {
     const [state] = useState({
         video: './assets/videos/video.mp4',
-        poster: '/assets/images/img.avif',
+        poster: '/assets/images/img.png',
         logo: '/assets/images/logo.png'
     })
     const {push} = useHistory()

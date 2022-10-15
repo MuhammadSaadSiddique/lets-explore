@@ -17,7 +17,7 @@ const Home = () => {
 
     const [state] = useState({
         heading: 'Lets Explore travel and enjoy',
-        paragraph: 'Join us today! And discover the most beautiful places and destinations in the world!'
+        paragraph: 'Join us today! And discover the most beautiful places and destinations in the world!',
 })
     const [registerModel] = useState('registerModel');
     const [loginModel] = useState('loginModel');
