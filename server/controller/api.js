@@ -8,7 +8,11 @@ import Amadeus from "amadeus";
 export const FetchRes = async (req, res, next) => {
     try {
         // const response = await amadeus.client.get("/v2/reference-data/urls/checkin-links?airlineCode=BA");
-        const { page, subType, keyword } = req.query;
+        // const { page, subType, keyword } = req.query;
+
+        const page = req.params.page;
+        const subType = req.params.subType;
+        const keyword = req.params.keyword;
         // API call with params we requested from client app
         const amadeus = new Amadeus({
             clientId: process.env.CLIENT_ID,
@@ -22,7 +26,7 @@ export const FetchRes = async (req, res, next) => {
         });
         // Sending response for client
 
-        await res.status(200).json(response.body);
+        await res.json(JSON.parse(response.body));// res.status(200).json(response.body);
     } catch (err) {
         await res.json(err);
         // next(err);
