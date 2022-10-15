@@ -15,7 +15,7 @@ const amadeus = new Amadeus({
 const authoriseData = async () =>{
     try{
       const resp = await axios.post("https://test.api.amadeus.com/v1/security/oauth2/token", 
-        'grant_type=client_credentials&client_id='+amadeus.clientId+'&client_secret='+amadeus.clientSecret+'}',
+        'grant_type=client_credentials&client_id='+amadeus.clientId+'&client_secret='+amadeus.clientSecret+'',
         {
           headers: {
             'Content-Type': 'application/x-www-form-urlencoded'
@@ -27,7 +27,7 @@ const authoriseData = async () =>{
       console.log(e);
     };
   }
-authoriseData();
+// authoriseData();
 
 // Endpoint
 router.get(`/${API}/airports`, async (req, res) => {
