@@ -1,7 +1,6 @@
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import {HelmetProvider} from "react-helmet-async";
 import ModelProvider from "./context/providers/ModelProvider";
-
 import NavProvider from "./context/providers/NavProvider";
 import Toggle from "./components/Toggle";
 import DestinationProvider from "./context/providers/DestinationProvider";
