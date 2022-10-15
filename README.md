@@ -24,3 +24,4 @@ From point A to point B, there can be multiple potential journeys involving a mi
 - **Place Screen:**
 Features like group tours (walking/bike), renting electric vehicles, local directions, routes condition, weather, real time crowd, sustainable activities etc. Nearest unvisited spots/attractions.
 
+[Join our Discord Community](https://discord.gg/sAS8Z8kp)
