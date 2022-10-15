@@ -31,15 +31,22 @@ const authoriseData = async () =>{
 
 // Endpoint
 router.get(`/${API}/airports`, async (req, res) => {
-  const { page, subType, keyword } = req.query;
+  // const { page, subType, keyword } = req.query;
+  
   // API call with params we requested from client app
-  const response = await amadeus.client.get("/v1/reference-data/locations", {
-    keyword,
-    subType,
-    "page[offset]": page * 10
-  });
+  //https://test.api.amadeus.com/v2/reference-data/urls/checkin-links?airlineCode=BA
+  //v1/reference-data/locations
+  try{
+    // const response = await amadeus.client.get("/v2/reference-data/urls/checkin-links?airlineCode=BA");
+    const { page, subType, keyword } = req.query;
+    // API call with params we requested from client app
+    const response = await amadeus.client.get("/v1/reference-data/locations", {
+      keyword,
+      subType,
+      "page[offset]": page * 10
+    });
   // Sending response for client
-  try {
+  
     await res.json(JSON.parse(response.body));
   } catch (err) {
     await res.json(err);
