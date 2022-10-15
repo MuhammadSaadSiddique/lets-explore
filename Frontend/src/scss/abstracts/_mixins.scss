@@ -18,7 +18,7 @@
 }
 
 @mixin button($firstColor, $secondColor, $textColor, $height,$fontSize,$bdr, $paddingVertical, $paddingHorizontal) {
-  background: linear-gradient(to right, $firstColor, $secondColor);
+  background: #4caf50;
   color: $textColor;
   text-decoration: none;
   height: $height;
@@ -51,7 +51,7 @@
 
 @mixin toggleSpanStyle($bg, $width, $height, $mt){
   display:  block;
-  background: $bg;
+  background: #4caf50;
   width: $width;
   height: $height;
   margin-top: $mt;
@@ -60,7 +60,7 @@
 
 @mixin status($bg, $color){
   padding: .6rem 1.3rem;
-  background: $bg;
+  background: #4caf50;
   color: $color;
   border-radius: .6rem;
   font-size: 1.3rem;

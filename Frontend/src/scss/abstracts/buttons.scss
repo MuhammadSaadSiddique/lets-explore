@@ -22,5 +22,6 @@
 
 .btn-white{
   @include button($white, $white, $black, 3rem, 1.2rem, .3rem, 0, 2rem);
+  background: linear-gradient(90deg,#4caf50ed,#009688ed);
   letter-spacing: .1rem;
 }
