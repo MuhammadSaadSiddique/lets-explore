@@ -37,8 +37,8 @@ const Login = (props) =>{
             />
         </div>
         <div className='group model__row'>
-            <input type="submit" name="" className="btn-dark" value="sSubmit"/>
-            <span onClick={()=> dispatch({type: OPEN_MODEL, payload: props.currentModel})}> צור משתמש חדש</span>
+            <input type="submit" name="" className="btn-dark" value="Submit"/>
+            <span onClick={() => dispatch({ type: OPEN_MODEL, payload: props.currentModel })}>Create a new user</span>
         </div>
     </form>)
 }

@@ -49,7 +49,7 @@ const Register = (props) => {
         </div>
         <div className='group model__row'>
             <input type="submit" name="" className="btn-dark" value="Subscribe" />
-            <span onClick={()=> dispatch({type: OPEN_MODEL, payload: props.currentModel})}> משתמש קיים? התחבר</span>
+            <span onClick={() => dispatch({ type: OPEN_MODEL, payload: props.currentModel })}>User exist? connect</span>
         </div>
         </form>)
 }
