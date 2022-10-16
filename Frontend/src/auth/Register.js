@@ -1,19 +1,23 @@
 import {useContext, useState} from "react";
-import ModelContext from "../context/ModelContext";
-import {OPEN_MODEL} from "../context/types/ModelTypes";
+import { RegisterContext } from "../context/RegisterContext";
+
+import axios from "axios";
 
 const Register = (props) => {
-    const {dispatch} = useContext(ModelContext);
+    const {username , email , password, dispatch} = useContext(RegisterContext);
     const [state, setState] = useState({
-        name: '',
+        username: '',
         email: '',
         password:''
     });
-    const registerForm = (e) =>{
+
+    const registerForm = async(e) =>{
         e.preventDefault();
-        // Todo
+         // check here
+        const res = await axios.post("localhost:8800/auth/register", state);
+      dispatch({ type: "CREATE", payload: res.data.details });
     }
-    return (<form onSubmit={registerForm}>
+    return (<form >
             <div className="model__heading">
             <h3>Create a new account</h3>
         </div>
@@ -22,9 +26,9 @@ const Register = (props) => {
                 type="text"
                 name=""
                 className="group__control"
-                placeholder="name"
-                value={state.name}
-                onChange={(e) => setState({ ...state, name: e.target.value })}
+                placeholder="username"
+                value={state.username}
+                onChange={(e) => setState({ ...state, username: e.target.value })}
             />
         </div>
         <div className='group'>
@@ -48,10 +52,11 @@ const Register = (props) => {
             />
         </div>
         <div className='group model__row'>
-            <input type="submit" name="" className="btn-dark" value="Subscribe" />
-            <span onClick={()=> dispatch({type: OPEN_MODEL, payload: props.currentModel})}> משתמש קיים? התחבר</span>
+            <button className="btn-dark" onClick={registerForm}>SignUp</button>
+             {/* Again check */}
         </div>
         </form>)
 }
 
 export default Register;
+
