@@ -4,7 +4,7 @@ import { RegisterContext } from "../context/RegisterContext";
 import axios from "axios";
 
 const Register = (props) => {
-    const {username , email , password, dispatch} = useContext(RegisterContext);
+    const { dispatch} = useContext(RegisterContext);
     const [state, setState] = useState({
         username: '',
         email: '',

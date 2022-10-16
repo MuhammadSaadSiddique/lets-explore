@@ -10,7 +10,7 @@ const Login = (props) =>{
         password: undefined,
       });
     
-      const {loading, error, dispatch } = useContext(AuthContext);
+      const { dispatch } = useContext(AuthContext);
 
     
       const handleChange = (e) => {

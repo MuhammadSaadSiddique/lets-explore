@@ -1,35 +1,25 @@
 {
-  "name": "exploreapi",
+  "name": "api",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "start": "node src/index.js",
-    "build": "cd ../client && npm run build && cd ../server"
+    "start": "nodemon index.js"
   },
   "keywords": [],
-  "author": "sarv",
+  "author": "",
   "license": "ISC",
   "dependencies": {
-    "@sendgrid/mail": "^6.5.5",
     "amadeus": "^7.0.0",
     "axios": "^1.1.3",
-    "body-parser": "^1.19.0",
-    "braintree": "^2.24.0",
-    "cookie-parser": "^1.4.5",
-    "cors": "^2.8.5",
-    "dotenv": "^8.2.0",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.0.1",
     "express": "^4.18.2",
-    "express-jwt": "^7.7.5",
-    "express-validator": "^6.14.2",
-    "formidable": "^1.2.2",
     "jsonwebtoken": "^8.5.1",
-    "lodash": "^4.17.21",
-    "moment": "^2.24.0",
-    "momment": "0.0.1",
-    "mongoose": "^5.12.3",
-    "morgan": "^1.10.0",
-    "nodemon": "^2.0.20",
-    "uuid": "^3.4.0"
-  },
-  "description": "asdf"
+    "mongoose": "^6.5.2",
+    "nodeman": "^1.1.2",
+    "nodemon": "^2.0.19"
+  }
 }
