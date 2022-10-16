@@ -5,8 +5,8 @@ const CityImage = ({img, status}) =>{
             <div className="cities__body__image">
                 <LazyLoadImage src={img} alt={img}/>
                 <div className={status === 'Crowded' ? 'bestselling'
-                    : status === 'new' ? 'new'
-                        : status === 'Less Crowded' ? 'hot'
+                   
+                        : status === 'Less Crowded' ? 'new'
                             : ''}>
                     {status}
                 </div>

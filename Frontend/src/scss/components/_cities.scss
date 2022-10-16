@@ -39,21 +39,56 @@
           transform: scale(1.2);
         }
       }
+            .bestselling {
+              position: absolute;
+              top: 1rem;
+              left: 1rem;
+              padding: .6rem 1.3rem;
+              background: #fb2424;
+              color: #fff;
+              border-radius: .6rem;
+              font-size: 1.3rem;
+              text-transform: capitalize
+            }
+      
+             .new {
+              position: absolute;
+              top: 1rem;
+              left: 1rem;
+              padding: .6rem 1.3rem;
+              background: #34d399;
+              color: #fff;
+              border-radius: .6rem;
+              font-size: 1.3rem;
+              text-transform: capitalize
+            }
+      
+             .hot {
+              position: absolute;
+              top: 1rem;
+              left: 1rem;
+              padding: .6rem 1.3rem;
+              background: #f7db3d;
+              color: #fff;
+              border-radius: .6rem;
+              font-size: 1.3rem;
+              text-transform: capitalize
+            }
 
-      .bestselling {
-        @include position(absolute, 1rem, 1rem, null, null, null, null);
-        @include status($red, $white);
-      }
+      // .bestselling {
+      //   @include position(absolute, 1rem, 1rem, null, null, null, null);
+      //   @include status($red, $white);
+      // }
 
-      .new {
-        @include position(absolute, 1rem, 1rem, null, null, null, null);
-        @include status($green, $white);
-      }
+      // .new {
+      //   @include position(absolute, 1rem, 1rem, null, null, null, null);
+      //   @include status($green, $white);
+      // }
 
-      .hot {
-        @include position(absolute, 1rem, 1rem, null, null, null, null);
-        @include status($orange, $white);
-      }
+      // .hot {
+      //   @include position(absolute, 1rem, 1rem, null, null, null, null);
+      //   @include status($orange, $white);
+      // }
     }
 
     &__contents{
