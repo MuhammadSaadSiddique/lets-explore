@@ -7,11 +7,11 @@ import InfoWindow from "./../components/InfoWindow.js";
 import "./Map.css";
 
 const Map = ({Latitude,Longitude}) => {
-  console.log('map Latitude', Latitude, 'Longitude', Longitude)
   
   const mapContainerRef = useRef(null);
   const [map, setMap] = useState(null);
   const woosmapLoaded = useScript(conf.woosmapMapJSUrl);
+  
   
     useEffect(() => {
       if (woosmapLoaded && !map) { //&& !Latitude && !Longitude
