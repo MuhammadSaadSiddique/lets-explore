@@ -6,7 +6,7 @@ name: Build and deploy Node.js project to Azure Function App - LetExplore
 on:
   push:
     branches:
-      - main
+      - deploy
   workflow_dispatch:
 
 env:
@@ -29,7 +29,6 @@ jobs:
         shell: pwsh
         run: |
           pushd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}'
-          cd Frontend
           npm install
           npm run build --if-present
           popd
