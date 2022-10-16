@@ -12,6 +12,9 @@ import React,{Suspense} from "react";
 import Nav from "./components/Nav";
 import LoadingSpinner from "./components/shared/LoadingSpinner";
 // import SearchRoot from './pages/search-root';
+// import React from 'react';
+// import Map from './pages/Map';
+// import './App.css'
 
 const Home = React.lazy(() => import('./pages/Home'));
 const About = React.lazy(() => import('./pages/About'));
@@ -21,7 +24,12 @@ const Contact = React.lazy(() => import('./pages/Contact'));
 // const Planner = React.lazy(() => import('./pages/Planner'));
 
 
+
+
 function App() {
+ 
+
+    
     return (
         <Router>
             <Suspense fallback={<div className="center"><LoadingSpinner/></div>}>

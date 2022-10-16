@@ -1,0 +1,39 @@
+.infoWindow {
+    width: 250px;
+    margin: -5px;
+    line-height: 1.2em;
+    font-size: 15px;
+    padding-bottom: 15px;
+}
+
+
+.infoWindow__storeName {
+    font-weight: 600;
+    vertical-align: middle;
+    margin: 0;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+.infoWindow__addressTitle, .infoWindow__contactTitle {
+    margin-top: .5rem;
+    font-size: .9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.infoWindow__addressTitle, .infoWindow__contactTitle, .infoWindow__addressLines, .infoWindow__addressCity, .infoWindow__contactPhone, .infoWindow__contactWebsite, .infoWindow__openingHours {
+    padding: 0 10px;
+}
+
+.infoWindow__contactWebsite a {
+    color: #008248;
+
+}
+
+.infoWindow__openingHours {
+    padding-top: 10px;
+    font-size: .8rem;
+    font-weight: 600;
+    color: #008248;
+}
