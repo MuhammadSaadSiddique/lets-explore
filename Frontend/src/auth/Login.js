@@ -21,6 +21,7 @@ const Login = (props) =>{
         e.preventDefault();
         dispatch({ type: "LOGIN_START" });
         try {
+            // check here
           const res = await axios.post("/auth/login", credentials);
           dispatch({ type: "LOGIN_SUCCESS", payload: res.data.details });
           
@@ -55,6 +56,7 @@ const Login = (props) =>{
         </div>
         <div className='group model__row'>
             <input type="submit" name="" className="btn-dark" value="sSubmit"/>
+            {/* Again check */}
             <span onClick={()=> dispatch({type: OPEN_MODEL, payload: props.currentModel})}> צור משתמש חדש</span>
         </div>
     </form>)
