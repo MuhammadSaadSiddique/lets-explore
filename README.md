@@ -1,28 +1,71 @@
 
-# lets-explore
+# Getting Started with Create React App
 
-# Issue
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Fighting tourist crowds and overtourism have become quite prevalent resulting in less authentic vacations. Some places in the world are unexplored and some are crowded. Most people travel to same places again and again. And in most of the cases, the reason is they don't know about new places and sometimes there are journey issues, ease of Payment etc.
+## Available Scripts
 
-# Mission
+In the project directory, you can run:
 
-We intend to build an application to provide full traveling plans and show new places with their facilities including hotel booking, traveling solutions, accessibilities and activities. Payment wallet can be added. Offline mode can be added.
+### `npm start`
 
-# Some Screen we want with APIs.
-- **Homepage:**
-Our app starts with homepage displaying logo. It provides user account creation, login, password reset features to the user
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-- **Map screen:**
-Map screen provides map with places. User can filter using activities and place categories etc.
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-- **Booking screen:**
-Booking screen contains trip planning with day schedules, Trip mates' management, accessories listing and budgets. User can join, book or cancel their booking.
+### `npm test`
 
-- **Journey Selection:**
-From point A to point B, there can be multiple potential journeys involving a mixture of all possible modes of transportation. The user chooses the journey based on the CO2 impact.
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-- **Place Screen:**
-Features like group tours (walking/bike), renting electric vehicles, local directions, routes condition, weather, real time crowd, sustainable activities etc. Nearest unvisited spots/attractions.
+### `npm run build`
 
-[Join our Discord Community](https://discord.gg/sAS8Z8kp)
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
