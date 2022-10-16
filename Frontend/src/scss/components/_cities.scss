@@ -42,7 +42,7 @@
 
       .bestselling {
         @include position(absolute, 1rem, 1rem, null, null, null, null);
-        @include status($orange, $white);
+        @include status($red, $white);
       }
 
       .new {
@@ -52,7 +52,7 @@
 
       .hot {
         @include position(absolute, 1rem, 1rem, null, null, null, null);
-        @include status($mainColor2, $white);
+        @include status($orange, $white);
       }
     }
 
