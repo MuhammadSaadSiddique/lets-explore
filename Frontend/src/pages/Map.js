@@ -1,34 +1,47 @@
 import React, { useRef, useEffect, useState } from "react";
 import ReactDOMServer from "react-dom/server";
 import conf from "./config.json";
-import useScript from "../hooks/useScript";
-import InfoWindow from "../components/InfoWindow";
+import useScript from "./../hooks/useScript";
+import InfoWindow from "./../components/InfoWindow.js";
 
-import "./Map.css"; 
+import "./Map.css";
 
-const Map = () => {
+const Map = ({Latitude,Longitude}) => {
+  console.log('map Latitude', Latitude, 'Longitude', Longitude)
+  
   const mapContainerRef = useRef(null);
   const [map, setMap] = useState(null);
   const woosmapLoaded = useScript(conf.woosmapMapJSUrl);
+  
+    useEffect(() => {
+      if (woosmapLoaded && !map) { //&& !Latitude && !Longitude
+        console.log('Latitude', Latitude, 'Longitude', Longitude)
+        // map.setCenter({ Latitude, Longitude }, { top: 50 });
+        setMap(initMap(Latitude, Longitude));
 
-  useEffect(() => {
-    if (woosmapLoaded && !map) {
-      setMap(initMap());
-    }
-  }, [woosmapLoaded]);
-  const initMap = () => {
-    const map = new window.woosmap.map.Map(
-      
-      mapContainerRef.current,
-      conf.woosmapMapOptions
-    );
-    console.log('mapdeee', map)
+      }
+    }, [woosmapLoaded]);
+  
 
+
+  const initMap = (Latitude, Longitude) => {
+    // const map = new window.woosmap.map.Map(
+    //   mapContainerRef.current,
+    //   conf.woosmapMapOptions.lat=Latitude,
+    //   conf.woosmapMapOptions.lng=Longitude,
+    //   conf.woosmapMapOptions.zoom=10,
+    // );
+    console.log('init Latitude', Latitude, 'Longitude', Longitude)
+    const map = new window.woosmap.map.Map(mapContainerRef.current,  {
+      center: { lat:Latitude, lng:Longitude },
+      zoom: 13
+    });
     const storesOverlay = new window.woosmap.map.StoresOverlay(
       conf.woosmapMapStyleOptions
     );
+    // map.setCenter({ Latitude, Longitude }, { top: 50 });
     storesOverlay.setMap(map);
-    debugger;
+
     const templateRenderer = {
       render: (storeProperties) => {
         return ReactDOMServer.renderToString(
@@ -51,10 +64,12 @@ const Map = () => {
         infoWindow.setContent(
           templateRenderer.render(selectedStore.properties)
         );
-        map.setCenter({ lat, lng }, { top: 50 });
+        // map.setCenter({ Latitude, Longitude }, { top: 50 });
         infoWindow.open(map, { lat, lng });
       }
+      
     );
+     
     return map;
   };
 
@@ -63,6 +78,7 @@ const Map = () => {
       <div ref={mapContainerRef} />
     </div>
   );
+
 };
 
 export default Map;

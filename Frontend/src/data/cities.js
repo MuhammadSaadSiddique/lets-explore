@@ -7,7 +7,7 @@ const Cities = [
 		duration: '2 days',
 		room: true,
 		food: false,
-		status: 'popular',
+		status: 'Crowded',
 		destinationId: 1,
 	},
 	{

@@ -8,7 +8,7 @@ import DestinationInfo from "../components/DestinationInfo";
 import Cities from "../components/cities/Cities";
 import Footer from "../components/footer/Footer";
 // import Map from "../components/map/Map";
-import Map from "./Map"
+import Map from "./Map";
 
 const Details = () => {
     const {destinationsData, dispatch} = useContext(DestinationContext);
@@ -31,9 +31,9 @@ const Details = () => {
             image={details.bigImage}>
             
         </Header>
-        {/* <DestinationInfo details={details}/>
-        <Cities cities={filteredCities} name={details.name}/> */}
-        <div><Map/></div>
+        <DestinationInfo details={details}/>
+        <Cities cities={filteredCities} name={details.name}/>
+        <Map Latitude={details.Latitude} Longitude={details.Longitude} />
         
         <Footer/>
     </>
