@@ -16,7 +16,7 @@ const NotFound = () =>{
             </Helmet>
 
             <Header heading={state.heading} paragraph={state.paragraph} image={state.image}>
-            <Link to="/" class="btn-default">חזור לעמוד הבית</Link>
+            <Link to="/" class="btn-default">Goto Home</Link>
             </Header>
 
         </>

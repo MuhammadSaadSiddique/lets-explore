@@ -1,12 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import './main.scss'
+import { RegisterContextProvider } from './context/RegisterContext';
+import { AuthContextProvider } from './context/AuthContext';
+import './main.scss';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <RegisterContextProvider>
+      <AuthContextProvider>
+      <App />
+      </AuthContextProvider>
+    </RegisterContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

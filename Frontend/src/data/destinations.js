@@ -8,6 +8,9 @@ image: '/assets/destinations/uk.jpg',
 		bigImage: '/assets/destinations/ukBig.jpg',
 		language: 'English',
 		currency: 'pound sterling',
+		Latitude: 51.507351,
+		Longitude: -0.127758,
+		
 	},
 	{
 		id: 2,
@@ -17,6 +20,8 @@ image: '/assets/destinations/uk.jpg',
 		bigImage: '/assets/destinations/usaBig.jpg',
 		language: 'English',
 		currency: 'dollar',
+		Latitude: 40.7127753, 
+		Longitude:-74.0059728
 	},
 	{
 		id: 3,
@@ -26,6 +31,8 @@ image: '/assets/destinations/thailand.jpg',
 		bigImage: '/assets/destinations/thailandBig.jpg',
 		language: 'Thai',
 		currency: 'Thai baht',
+		Latitude: 13.7563309,
+		Longitude: 100.5017651
 	},
 	{
 		id: 4,
@@ -35,6 +42,8 @@ image: '/assets/destinations/spain.jpg',
 		bigImage: '/assets/destinations/spainBig.jpg',
 		language: 'Spanish',
 		currency: 'euro',
+		Latitude: 40.4167754,
+		Longitude: -3.7037902
 	},
 	{
 		id: 5,
@@ -44,6 +53,8 @@ image: '/assets/destinations/spain.jpg',
 		bigImage: '/assets/destinations/cambodiaBig.jpg',
 		language: 'Khamrit',
 		currency: 'real',
+		Latitude: 11.5448733,
+		Longitude: 104.8921668
 	},
 	{
 		id: 6,
@@ -53,6 +64,8 @@ image: '/assets/destinations/france.jpg',
 		bigImage: '/assets/destinations/franceBig.jpg',
 		language: 'French',
 		currency: 'euro',
+		Latitude: 48.8566969,
+		Longitude: 2.3514616
 	},
 	{
 		id: 7,
@@ -62,6 +75,8 @@ image: '/assets/destinations/france.jpg',
 		bigImage: '/assets/destinations/switzerlandBig.jpg',
 		language: 'Italian, French, German and Romansh',
 		currency: 'Swiss Franc',
+		Latitude: 46.818188,
+		Longitude: 8.2275124
 	},
 	{
 		id: 8,
@@ -71,5 +86,7 @@ image: '/assets/destinations/france.jpg',
 		bigImage: '/assets/destinations/turkeyBig.jpg',
 		language: 'Turkish',
 		currency: 'Turkish Lira',
+		Latitude: 38.963745,
+		Longitude: 35.243322
 	},
 ];

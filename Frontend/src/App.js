@@ -11,17 +11,25 @@ import AnimationsProvider from "./context/providers/AnimationsProvider";
 import React,{Suspense} from "react";
 import Nav from "./components/Nav";
 import LoadingSpinner from "./components/shared/LoadingSpinner";
-import SearchRoot from './pages/search-root';
+// import SearchRoot from './pages/search-root';
+// import React from 'react';
+// import Map from './pages/Map';
+// import './App.css'
 
 const Home = React.lazy(() => import('./pages/Home'));
 const About = React.lazy(() => import('./pages/About'));
 const NotFound = React.lazy(() => import('./pages/NotFound'));
 const Details = React.lazy(() => import('./pages/Details'));
 const Contact = React.lazy(() => import('./pages/Contact'));
-const Planner = React.lazy(() => import('./pages/Planner'));
+// const Planner = React.lazy(() => import('./pages/Planner'));
+
+
 
 
 function App() {
+ 
+
+    
     return (
         <Router>
             <Suspense fallback={<div className="center"><LoadingSpinner/></div>}>
@@ -39,8 +47,8 @@ function App() {
                                             <Route path='/about' exact component={About}/>
                                             <Route path='/contact' exact component={Contact}/>
                                             <Route path='/details/:id' exact component={Details}/>
-                                            <Route path='/planner' exact component={Planner}/>
-                                            <Route path='/search-root' exact component={SearchRoot}/>
+                                            {/* <Route path='/planner' exact component={Planner}/> */}
+                                            {/* <Route path='/search-root' exact component={SearchRoot}/> */}
                                             <Route component={NotFound}/>
                                         </Switch>
                                     </HelmetProvider>

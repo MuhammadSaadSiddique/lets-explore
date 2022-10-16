@@ -1,17 +1,35 @@
 import {useContext, useState} from "react";
-import ModelContext from "../context/ModelContext";
+import { AuthContext } from "../context/AuthContext";
 import {OPEN_MODEL} from "../context/types/ModelTypes";
+import axios from "axios";
+
 
 const Login = (props) =>{
-    const {dispatch} = useContext(ModelContext);
-    const [state, setState] = useState({
-        email: '',
-        password:''
-    });
-    const loginForm = (e) =>{
+    const [credentials, setCredentials] = useState({
+        username: undefined,
+        password: undefined,
+      });
+    
+      const { dispatch } = useContext(AuthContext);
+
+    
+      const handleChange = (e) => {
+        setCredentials((prev) => ({ ...prev, [e.target.id]: e.target.value }));
+      };
+    
+      const handleClick = async (e) => {
         e.preventDefault();
-    }
-    return (<form onSubmit={loginForm}>
+        dispatch({ type: "LOGIN_START" });
+        try {
+            // check here
+          const res = await axios.post("/auth/login", credentials);
+          dispatch({ type: "LOGIN_SUCCESS", payload: res.data.details });
+          
+        } catch (err) {
+          dispatch({ type: "LOGIN_FAILURE", payload: err.response.data });
+        }
+      };
+    return (<form onSubmit={handleClick}>
         <div className="model__heading">
             <h3>Login</h3>
         </div>
@@ -22,8 +40,8 @@ const Login = (props) =>{
                 name=""
                 className="group__control"
                 placeholder="email"
-                value={state.email}
-                onChange={(e)=> setState({...state, email: e.target.value})}
+                value={credentials.email}
+                onChange={handleChange}
             />
         </div>
         <div className='group'>
@@ -32,12 +50,13 @@ const Login = (props) =>{
                 name=""
                 className="group__control"
                 placeholder="password"
-                value={state.password}
-                onChange={(e)=> setState({...state, password: e.target.value})}
+                value={credentials.password}
+                onChange={handleChange}
             />
         </div>
         <div className='group model__row'>
             <input type="submit" name="" className="btn-dark" value="sSubmit"/>
+            {/* Again check */}
             <span onClick={()=> dispatch({type: OPEN_MODEL, payload: props.currentModel})}> צור משתמש חדש</span>
         </div>
     </form>)

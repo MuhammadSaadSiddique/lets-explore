@@ -1,0 +1,9 @@
+.mapContainer {
+    width: 100%;
+    height: 600px;
+}
+
+.mapboxgl-map {
+    width: 100%;
+    height: 100%;
+}

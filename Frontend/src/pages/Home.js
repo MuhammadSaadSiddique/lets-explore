@@ -17,7 +17,7 @@ const Home = () => {
 
     const [state] = useState({
         heading: 'Lets Explore travel and enjoy',
-        paragraph: 'Join us today! And discover the most beautiful places and destinations in the world!'
+        paragraph: 'Join us today! And discover the most beautiful places and destinations in the world!',
 })
     const [registerModel] = useState('registerModel');
     const [loginModel] = useState('loginModel');
@@ -38,6 +38,14 @@ const Home = () => {
             <Destinations/>
             <Services/>
             <GalleryComponent/>
+            {/* <div>Features
+                Customize booking plans and planning
+                Route optimization
+                Sustainable flights
+                Offline access
+                Location map with crowd calculation
+
+            </div> */}
             {/*<Reviews/>*/}
             <Footer/>
         </>
