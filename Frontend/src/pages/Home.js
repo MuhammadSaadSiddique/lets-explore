@@ -38,6 +38,14 @@ const Home = () => {
             <Destinations/>
             <Services/>
             <GalleryComponent/>
+            {/* <div>Features
+                Customize booking plans and planning
+                Route optimization
+                Sustainable flights
+                Offline access
+                Location map with crowd calculation
+
+            </div> */}
             {/*<Reviews/>*/}
             <Footer/>
         </>
